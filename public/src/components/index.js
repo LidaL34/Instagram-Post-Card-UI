@@ -1,0 +1,1 @@
+export {default as MyPost} from "./post/profile.js" 
