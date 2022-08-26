@@ -12,7 +12,7 @@ class AppContainer extends HTMLElement {
 
     render (){
         this.shadowRoot.innerHTML += `
-        <my-post pp='img/pp.jpg' username='LidaLee' location='Antartida' post='img/bg.jpg' likes='2000 likes' cap='Neverland' hastag='#Antartida' date= '1 DAY AGO'></my-post>
+        <my-post pp='img/pp.jpg' username='LidaLee' location='Antartida' post='img/bg.jpg' likes='2000 likes' cap='La vida es eso que pasa cuendo pasa la vida' hastag='#Antartida' comments = 'View all 130 comments' date= '1 DAY AGO'></my-post>
         `;
     }
 
