@@ -1,4 +1,5 @@
 import * as components from "./components/index.js"
+import data from './components/data/data.js'
 
 class AppContainer extends HTMLElement {
     constructor (){
@@ -11,10 +12,24 @@ class AppContainer extends HTMLElement {
     }
 
     render (){
-        this.shadowRoot.innerHTML += `
-        <my-post pp='img/pp.jpg' username='LidaLee' location='Antartida' post='img/bg.jpg' likes='2000 likes' cap='La vida es eso que pasa cuendo pasa la vida' hastag='#Antartida' comments = 'View all 130 comments' date= '1 DAY AGO'></my-post>
-        `;
-    }
+        data.forEach((element)=> {
+            this.shadowRoot.innerHTML += `
+            <my-post 
+            pp='${element.pp}' 
+            username='${element.username}' 
+            location='${element.location}' 
+            post='${element.post}' 
+            likes='${element.likes}' 
+            cap='${element.cap}'
+            hastag='${element.hastag}' 
+            comments = '${element.commets}' 
+            date= '${element.date}'>
+            </my-post>
+            `;
+        })
+
+        }
+        
 
 }
 
